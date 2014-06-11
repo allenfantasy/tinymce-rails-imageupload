@@ -19,6 +19,7 @@
             {type: 'textbox', name: 'file', label: ed.translate('Choose an image'), subtype: 'file'},
             {type: 'textbox', name: 'alt',  label: ed.translate('Image description')},
             {type: 'container', classes: 'error', html: "<p style='color: #b94a48;'>&nbsp;</p>"},
+            {type: 'container', classes: 'hint', html: "<p style='color: orange;'>请上传不大于300KB的图片</p>"},
 
             // Trick TinyMCE to add a empty div that "preloads" the throbber image
             {type: 'container', classes: 'throbber'},
