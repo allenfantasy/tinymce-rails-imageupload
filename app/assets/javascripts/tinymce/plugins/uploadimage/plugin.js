@@ -96,7 +96,7 @@
 
       function insertImage() {
         if(getInputValue("file") == "") {
-          return handleError('You must choose a file');
+          return handleError('请选择上传的文件');
         }
 
         throbber = new top.tinymce.ui.Throbber(win.getEl());
@@ -130,7 +130,7 @@
           var doc = target.contentDocument || target.contentWindow.document;
           handleResponse(doc.getElementsByTagName("body")[0].innerHTML);
         } else {
-          handleError("Didn't get a response from the server");
+          handleError("服务器未响应，请联系维护人员");
         }
       }
 
@@ -145,7 +145,7 @@
             ed.windowManager.close();
           }
         } catch(e) {
-          handleError('Got a bad response from the server');
+          handleError('请勿上传超过300KB的文件');
         }
       }
 
